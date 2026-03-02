@@ -1,37 +1,37 @@
-# JupyterLite Demo
+# Machine Learning in Cybersecurity
 
-[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlite.github.io/demo)
+Interactive notebooks for learning how to apply machine learning to cybersecurity problems. Runs entirely in the browser via [JupyterLite](https://jupyterlite.readthedocs.io/) — no installation required.
 
-JupyterLite deployed as a static site to GitHub Pages, for demo purposes.
+## Notebooks
 
-## ✨ Try it in your browser ✨
+### BFH 1 — Android Malware Detection
 
-➡️ **https://jupyterlite.github.io/demo**
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/msblei/ml_in_cysec/blob/main/content/BFH_1_Android_Malware_Detection.ipynb)
 
-![github-pages](https://user-images.githubusercontent.com/591645/120649478-18258400-c47d-11eb-80e5-185e52ff2702.gif)
+Classify Android apps as malware or benign using the [Drebin dataset](https://www.mlsec.org/docs/2014-ndss.pdf) (binary features for permissions, API calls, and class usage).
 
-## Requirements
+- **Session 1 — Logistic Regression:** Baseline binary classifier with ROC curve analysis
+- **Session 2 — Support Vector Machine:** Configurable kernel (linear, poly, rbf, sigmoid), regularization strength, and decision boundary visualization via PCA
 
-JupyterLite is being tested against modern web browsers:
+### BFH 2 — DDoS Detection with Neural Networks
 
-- Firefox 90+
-- Chromium 89+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/msblei/ml_in_cysec/blob/main/content/BFH_2_Neural_Network.ipynb)
 
-## Deploy your JupyterLite website on GitHub Pages
+Detect DDoS attacks in cloud network traffic using a neural network trained on the [BCCC Cloud Packet DDoS 2024 dataset](https://www.mdpi.com/2078-2489/15/4/195) (319 network flow features).
 
-Check out the guide on the JupyterLite documentation: https://jupyterlite.readthedocs.io/en/latest/quickstart/deploy.html
+- Uses scikit-learn's `MLPClassifier`
+- Students tune: hidden layer sizes, activation function, learning rate, regularization, batch size, and early stopping
+- Outputs training loss curve and detailed evaluation metrics (accuracy, precision, recall, F1, F-beta, TPR, FPR, confusion matrix)
 
-## Further Information and Updates
+## Run in the browser
 
-For more info, keep an eye on the JupyterLite documentation:
+This project is deployed as a JupyterLite site on GitHub Pages:
 
-- How-to Guides: https://jupyterlite.readthedocs.io/en/latest/howto/index.html
-- Reference: https://jupyterlite.readthedocs.io/en/latest/reference/index.html
+**https://msblei.github.io/ml_in_cysec**
 
-This template provides the Pyodide kernel (`jupyterlite-pyodide-kernel`), the JavaScript kernel (`jupyterlite-javascript-kernel`), and the p5 kernel (`jupyterlite-p5-kernel`), along with other
-optional utilities and extensions to make the JupyterLite experience more enjoyable. See the
-[`requirements.txt` file](requirements.txt) for a list of all the dependencies provided.
+Requirements: Firefox 90+ or Chromium 89+
 
-For a template based on the Xeus kernel, see the [`jupyterlite/xeus-python-demo` repository](https://github.com/jupyterlite/xeus-python-demo)
+## References
 
-
+- Arp, D. et al. _"Drebin: Effective and explainable detection of android malware in your pocket."_ NDSS 2014.
+- Shafi, M. et al. _"Toward generating a new cloud-based Distributed Denial of Service (DDoS) dataset and cloud intrusion traffic characterization."_ Information 15.4 (2024): 195.
