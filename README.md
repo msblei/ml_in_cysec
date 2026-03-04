@@ -1,6 +1,6 @@
 # Machine Learning in Cybersecurity
 
-Interactive notebooks for learning how to apply machine learning to cybersecurity problems. Runs entirely in the browser via [JupyterLite](https://jupyterlite.readthedocs.io/) — no installation required.
+Interactive notebooks for learning how to apply machine learning to cybersecurity problems. Runs entirely in the browser via [JupyterLite](https://jupyterlite.readthedocs.io/).
 
 ## Notebooks
 
